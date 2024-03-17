@@ -1,0 +1,21 @@
+.DS_Store
+*.log
+
+.ssh/*
+# !.ssh/config
+
+.config/gh
+.config/gh-copilot
+# .config/lazygit/config.yml
+.config/lazygit/state.yml
+.config/dracula-alacritty
+.config/configstore
+.config/k9s
+.config/.wrangler
+.config/github-copilot
+.config/tmux/plugins
+
+AppSupport
+
+.config/packer/
+.config/hcloud/cli.toml
