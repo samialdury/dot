@@ -5,8 +5,6 @@ end
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx BAT_CONFIG_PATH "$XDG_CONFIG_HOME/bat.conf"
 
-set -gx TERM xterm-256color
-
 set -gx BIN "/usr/bin:/usr/local/bin"
 set -gx HOMEBREW_BIN /opt/homebrew/bin
 set -gx PNPM_HOME "$HOME/Library/pnpm"
