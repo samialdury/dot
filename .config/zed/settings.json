@@ -1,0 +1,60 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "vim_mode": false,
+  "relative_line_numbers": false,
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha"
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true
+  },
+  "show_whitespaces": "selection",
+  "ui_font_size": 18,
+  "buffer_font_size": 18,
+  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "terminal": {
+    "font_size": 18,
+    "font_family": "FiraCode Nerd Font Mono"
+  },
+  "auto_update": true,
+  "autosave": "on_focus_change",
+  "copilot": {
+    "disabled_globs": ["*.go"]
+  },
+  "ensure_final_newline_on_save": true,
+  "languages": {
+    "JavaScript": {
+      "format_on_save": {
+        "external": {
+          // "command": "prettier",
+          // "arguments": ["--stdin-filepath", "{buffer_path}"]
+          "command": "bunx",
+          "arguments": [
+            "prettier",
+            "--stdin-filepath",
+            "{buffer_path}",
+            "--write"
+          ]
+        }
+      },
+      "code_actions_on_format": {
+        // "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        // "source.fixAll.eslint": true
+      }
+    }
+  }
+}
