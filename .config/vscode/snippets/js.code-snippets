@@ -1,0 +1,37 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  "Print to console": {
+    "scope": "javascript,typescript,typescriptreact,javascriptreact",
+    "prefix": "cl",
+    "body": ["console.log($1);$0"],
+    "description": "Log output to console"
+  },
+
+  "Try-catch": {
+    "scope": "javascript,typescript,typescriptreact,javascriptreact",
+    "prefix": "tc",
+    "body": ["try {\n\t$1\n} catch {\n\t$2\n}$0"],
+    "description": "Try-catch block"
+  },
+
+  "Debug": {
+    "scope": "javascript,typescript,typescriptreact,javascriptreact",
+    "prefix": "dbg",
+    "body": ["console.log('\\n\\n')\nconsole.log($1)\nconsole.log('\\n\\n')"],
+    "description": "Log as debug"
+  },
+
+  "Debug object": {
+    "scope": "javascript,typescript,typescriptreact,javascriptreact",
+    "prefix": "dbgo",
+    "body": [
+      "console.log('\\n\\n')\nconsole.dir($1, { depth: null })\nconsole.log('\\n\\n')"
+    ],
+    "description": "Log as debug object"
+  }
+}

@@ -1,0 +1,293 @@
+{
+    // Security
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    // Telemetry
+    "telemetry.telemetryLevel": "off",
+    "gitlens.telemetry.enabled": false,
+    "redhat.telemetry.enabled": false,
+    // Window
+    "window.autoDetectColorScheme": true,
+    "window.titleBarStyle": "custom",
+    "window.nativeTabs": false,
+    // Workbench
+    "workbench.activityBar.location": "top",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.preferredLightColorTheme": "Catppuccin Mocha",
+    "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.sideBar.location": "left",
+    "workbench.startupEditor": "none",
+    // Explorer
+    "explorer.compactFolders": false,
+    // Editor
+    "editor.fontFamily": "FiraCode Nerd Font Mono Ret",
+    "editor.fontSize": 18,
+    "editor.fontWeight": "normal",
+    "editor.fontLigatures": false,
+    "editor.suggestSelection": "first",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnPaste": false,
+    "editor.autoIndent": "keep",
+    "editor.minimap.enabled": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.linkedEditing": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.inlayHints.enabled": "on",
+    "editor.inlayHints.fontFamily": "FiraCode Nerd Font Mono Ret",
+    "editor.inlayHints.fontSize": 18,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.maxTokenizationLineLength": 2500,
+    "editor.lineNumbers": "on",
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    // Terminal
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono Ret",
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.minimumContrastRatio": 1,
+    // Files
+    "files.autoSave": "onFocusChange",
+    "files.autoSaveWhenNoErrors": true,
+    // Git
+    "git.mergeEditor": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.openRepositoryInParentFolders": "always",
+    // Copilot
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "yaml": true,
+        "go": false,
+        "rust": true,
+        "dotenv": false
+    },
+    "github.copilot.editor.enableCodeActions": false,
+    // Prettier
+    "prettier.requireConfig": true,
+    "prettier.useEditorConfig": false,
+    // ESLint
+    "eslint.runtime": "node",
+    "eslint.execArgv": [
+        "--max_old_space_size=8192"
+    ],
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "astro"
+    ],
+    "eslint.experimental.useFlatConfig": true,
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ],
+    // JavaScript
+    "javascript.preferences.importModuleSpecifier": "relative",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[javascript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        }
+    },
+    // TypeScript
+    "typescript.tsserver.maxTsServerMemory": 4096,
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        }
+    },
+    "[typescriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        }
+    },
+    "[javascript][typescript][typescriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        }
+    },
+    // Go
+    "go.toolsManagement.autoUpdate": true,
+    "[go]": {
+        "editor.defaultFormatter": "golang.go",
+        "editor.tabSize": 4,
+        "editor.useTabStops": true,
+        "editor.insertSpaces": false,
+        "files.insertFinalNewline": false
+    },
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ],
+    "[go.mod]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+    "gopls": {
+        "ui.semanticTokens": true
+    },
+    // Rust
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        },
+        "editor.tabSize": 4
+    },
+    // JSON
+    "[json]": {
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ]
+    },
+    // YAML
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "gitlens.codeLens.scopes": [
+            "document"
+        ]
+    },
+    // SQL
+    "[sql]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "sql-formatter.uppercase": true,
+    // Prisma
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+    // Markdown
+    "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.wordWrap": "on"
+    },
+    // CSS
+    "[css]": {
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ]
+    },
+    "tailwindCSS.experimental.classRegex": [
+        [
+            "cva\\(([^)]*)\\)",
+            "[\"'`]([^\"'`]*).*?[\"'`]"
+        ],
+        [
+            "cx\\(([^)]*)\\)",
+            "(?:'|\"|`)([^']*)(?:'|\"|`)"
+        ],
+        [
+            "cn\\(([^)]*)\\)",
+            "(?:'|\"|`)([^']*)(?:'|\"|`)"
+        ],
+        [
+            "clsx\\(([^)]*)\\)",
+            "(?:'|\"|`)([^']*)(?:'|\"|`)"
+        ]
+    ],
+    // Terraform
+    "[terraform]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.codeActionsOnSave": {
+            "source.formatAll.terraform": "explicit",
+            "source.fixAll.terraform": "explicit"
+        }
+    },
+    "[terraform-vars]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.codeActionsOnSave": {
+            "source.formatAll.terraform": "explicit",
+            "source.fixAll.terraform": "explicit"
+        }
+    },
+    "[terraform][terraform-vars]": {
+        "editor.codeActionsOnSave": {
+            "source.formatAll.terraform": "explicit",
+            "source.fixAll.terraform": "explicit"
+        }
+    },
+    // Docker
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.autoIndent": "advanced"
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    // DotENV
+    "dotenv.enableAutocloaking": false,
+    "[dotenv]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    // Vim
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    // Other
+    "files.associations": {
+        "*.css": "tailwindcss",
+        ".env*": "dotenv",
+        "*.mdx": "markdown",
+        "*.vars": "dotenv",
+        "*.sentryclirc": "toml",
+        "*.tfvars": "terraform-vars",
+        "*.yaml.tmpl": "yaml",
+        "*.yaml.tpl": "yaml",
+        "*.yml.tmpl": "yaml",
+        "*.yml.tpl": "yaml"
+    },
+    "[makefile]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false
+    },
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[properties]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[ignore]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "editor.tokenColorCustomizations": {
+        "[*Light*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#000"
+                    }
+                }
+            ]
+        },
+        "[*Dark*]": {
+            "textMateRules": [
+                {
+                    "scope": "ref.matchtext",
+                    "settings": {
+                        "foreground": "#fff"
+                    }
+                }
+            ]
+        },
+        "textMateRules": []
+    },
+    "pulumi-lsp.detectExtensionConflicts": false
+}
