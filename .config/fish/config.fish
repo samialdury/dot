@@ -4,6 +4,7 @@ end
 
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx BAT_CONFIG_PATH "$XDG_CONFIG_HOME/bat/bat.conf"
+set -gx STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
 
 set -gx BIN "/usr/bin:/usr/local/bin"
 set -gx HOMEBREW_BIN /opt/homebrew/bin
