@@ -1,5 +1,5 @@
 function fish_greeting
-    fortune | cowsay | lolcat
+    # fortune | cowsay | lolcat
 end
 
 set -gx XDG_CONFIG_HOME "$HOME/.config"
