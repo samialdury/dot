@@ -2,7 +2,7 @@
 
 My personal dotfiles.
 
-## Setup a new Mac
+## Set up a new Mac
 
 ```sh
 # Install xcode command line tools
