@@ -11,11 +11,13 @@ help: ## Display this help
 ##@ Back up
 
 .PHONY: backup
-backup:
+backup: ## Back up Brewfile
 	brew bundle dump --force --file=$(PWD)/Brewfile
 	git add Brewfile
 	git commit -m "chore(brew): update Brewfile"
 	git push origin main
+
+##@ Settings
 
 .PHONY: set
 set: ## Set up system settings
