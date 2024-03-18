@@ -6,13 +6,11 @@
 
 .config/gh
 .config/gh-copilot
-# .config/lazygit/config.yml
+.config/github-copilot
 .config/lazygit/state.yml
-.config/dracula-alacritty
 .config/configstore
 .config/k9s
 .config/.wrangler
-.config/github-copilot
 .config/tmux/plugins
 
 AppSupport
