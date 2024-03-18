@@ -68,13 +68,13 @@ link: clean ## Link config files
 	mkdir -p ~/.config/fish
 
 	ln -sf $(PWD)/.gitconfig-global ~/.gitconfig
-	ln -sf $(PWD)/.config/bat.conf ~/.config/bat.conf
 	ln -sf $(PWD)/.config/starship.toml ~/.config/starship.toml
 	ln -sf $(PWD)/.config/tmux/tmux.conf ~/.config/tmux/tmux.conf
 	ln -sf $(PWD)/.config/fish/config.fish ~/.config/fish/config.fish
 	ln -sf $(PWD)/.config/fish/fish_variables ~/.config/fish/fish_variables
 
 	ln -sfn $(PWD)/.config/alacritty ~/.config/alacritty
+	ln -sfn $(PWD)/.config/bat ~/.config/bat
 	ln -sfn $(PWD)/.config/lazygit ~/.config/lazygit
 	ln -sfn $(PWD)/.config/nvim ~/.config/nvim
 	ln -sfn $(PWD)/.config/vscode ~/.config/vscode
@@ -87,13 +87,13 @@ link: clean ## Link config files
 .PHONY: clean
 clean: ## Clean up
 	rm -f ~/.gitconfig
-	rm -f ~/.config/bat.conf
 	rm -f ~/.config/starship.toml
 	rm -f ~/.config/tmux/.tmux.conf
 	rm -f ~/.config/fish/config.fish
 	rm -f ~/.config/fish/fish_variables
 
 	rm -rf ~/.config/alacritty
+	rm -rf ~/.config/bat
 	rm -rf ~/.config/lazygit
 	rm -rf ~/.config/nvim
 	rm -rf ~/.config/vscode
