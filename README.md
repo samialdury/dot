@@ -18,8 +18,8 @@ xcode-select --install
 echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
 chsh -s /opt/homebrew/bin/fish
 
-# Install brew packages
-brew bundle install --file=~/dot/Brewfile
+# Install OpenSSH
+brew install openssh
 
 # Generate ssh key
 ssh-keygen -t ed25519 -C "<comment>"
@@ -42,6 +42,9 @@ git clone git@github.com:samialdury/dot.git ~/dot
 
 # Install tpm (tmux plugin manager)
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+
+# Install brew packages
+brew bundle install --file=~/dot/Brewfile
 
 tmux
 # <ctrl+b> + I (install plugins)
