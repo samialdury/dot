@@ -31,6 +31,9 @@ alias search="fzf --preview 'bat --color=always --style=numbers --line-range=:50
 alias n="node"
 alias p="pnpm"
 
+# Neovim
+alias v="nvim"
+
 # Update & clean Homebrew
 alias b="brew update; brew upgrade; brew cleanup; brew cleanup -s; brew doctor; brew missing"
 # Git
@@ -72,10 +75,3 @@ fnm completions --shell fish | source
 
 # starship prompt
 starship init fish | source
-
-# pnpm
-set -gx PNPM_HOME /Users/sami/Library/pnpm
-if not string match -q -- $PNPM_HOME $PATH
-    set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
