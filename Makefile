@@ -8,22 +8,97 @@ VSCODE_CONFIG_DIR = ~/Library/Application\ Support/Code/User
 help: ## Display this help
 	@awk 'BEGIN {FS = ":.*##"; printf "Usage:\n  make \033[36m<target>\033[0m\n"} /^[a-zA-Z_0-9-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
 
+##@ Back up
+
+.PHONY: backup
+backup:
+	brew bundle dump --force --file=$(PWD)/Brewfile
+	git add Brewfile
+	git commit -m "chore(brew): update Brewfile"
+	git push origin main
+
+.PHONY: set
+set: ## Set up system settings
+# https://macos-defaults.com
+
+# Disable font smoothing
+	defaults -currentHost write -g AppleFontSmoothing -int 0
+# Set screenshots location
+	defaults write com.apple.screencapture location -string "~/Desktop/screenshots"
+# Automatically empty bin after 30 days
+	defaults write com.apple.finder "FXRemoveOldTrashItems" -bool true
+# Show hidden files in Finder
+	defaults write com.apple.finder AppleShowAllFiles -bool true
+# Show all filename extensions in Finder
+	defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# Show path bar in Finder
+	defaults write com.apple.finder ShowPathbar -bool true
+# List view by default in Finder
+	defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+# Show the app switcher on all displays
+	defaults write com.apple.dock appswitcher-all-displays -bool true
+# Disable press-and-hold for keys in favor of key repeat
+	defaults write -g ApplePressAndHoldEnabled -bool false
+# Set click weight to light
+	defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0
+# Do not automatically rearrange Spaces based on most recent use
+	defaults write com.apple.dock mru-spaces -bool false
+# Group windows by application in Mission Control
+	defaults write com.apple.dock expose-group-by-app -bool true
+# Set Dock to auto-hide
+	defaults write com.apple.dock autohide -bool true
+# Put Dock on the left
+	defaults write com.apple.dock orientation -string "left"
+# Do not show recent applications in Dock
+	defaults write com.apple.dock show-recents -bool false
+# Show only active apps in Dock
+	defaults write com.apple.dock static-only -bool true
+# Set the icon size of Dock items to 36 pixels
+	defaults write com.apple.dock tilesize -int 36
+
+	killall Finder
+	killall Dock
+	killall SystemUIServer
+
 ##@ Configuration
 
 .PHONY: link
-link:
-	ln -sf $(PWD)/.config ~/.config
+link: clean ## Link config files
+	mkdir -p ~/.config
+	mkdir -p ~/.config/fish
+
 	ln -sf $(PWD)/.gitconfig-global ~/.gitconfig
-# VSCode
+	ln -sf $(PWD)/.config/bat.conf ~/.config/bat.conf
+	ln -sf $(PWD)/.config/starship.toml ~/.config/starship.toml
+	ln -sf $(PWD)/.config/tmux/tmux.conf ~/.config/tmux/tmux.conf
+	ln -sf $(PWD)/.config/fish/config.fish ~/.config/fish/config.fish
+	ln -sf $(PWD)/.config/fish/fish_variables ~/.config/fish/fish_variables
+
+	ln -sfn $(PWD)/.config/alacritty ~/.config/alacritty
+	ln -sfn $(PWD)/.config/lazygit ~/.config/lazygit
+	ln -sfn $(PWD)/.config/nvim ~/.config/nvim
+	ln -sfn $(PWD)/.config/vscode ~/.config/vscode
+	ln -sfn $(PWD)/.config/zed ~/.config/zed
+
 	ln -sf $(PWD)/.config/vscode/settings.json $(VSCODE_CONFIG_DIR)/settings.json
 	ln -sf $(PWD)/.config/vscode/keybindings.json $(VSCODE_CONFIG_DIR)/keybindings.json
-	ln -sf $(PWD)/.config/vscode/snippets $(VSCODE_CONFIG_DIR)/snippets
+	ln -sfn $(PWD)/.config/vscode/snippets $(VSCODE_CONFIG_DIR)/snippets
 
 .PHONY: clean
 clean: ## Clean up
-	rm -rf ~/.config
 	rm -f ~/.gitconfig
-# VSCode
+	rm -f ~/.config/bat.conf
+	rm -f ~/.config/starship.toml
+	rm -f ~/.config/tmux/.tmux.conf
+	rm -f ~/.config/fish/config.fish
+	rm -f ~/.config/fish/fish_variables
+
+	rm -rf ~/.config/alacritty
+	rm -rf ~/.config/lazygit
+	rm -rf ~/.config/nvim
+	rm -rf ~/.config/vscode
+	rm -rf ~/.config/zed
+
 	rm -f $(VSCODE_CONFIG_DIR)/settings.json
 	rm -f $(VSCODE_CONFIG_DIR)/keybindings.json
-	rm -f $(VSCODE_CONFIG_DIR)/snippets
+	rm -rf $(VSCODE_CONFIG_DIR)/snippets
