@@ -67,6 +67,7 @@ set: ## Set up system settings
 .PHONY: link
 link: clean ## Link config files
 	mkdir -p ~/.config
+	mkdir -p ~/.config/tmux
 	mkdir -p ~/.config/fish
 
 	ln -sf $(PWD)/.gitconfig-global ~/.gitconfig
@@ -74,17 +75,17 @@ link: clean ## Link config files
 	ln -sf $(PWD)/.config/fish/config.fish ~/.config/fish/config.fish
 	ln -sf $(PWD)/.config/fish/fish_variables ~/.config/fish/fish_variables
 
-	ln -sfn $(PWD)/.config/alacritty ~/.config/alacritty
-	ln -sfn $(PWD)/.config/bat ~/.config/bat
-	ln -sfn $(PWD)/.config/lazygit ~/.config/lazygit
-	ln -sfn $(PWD)/.config/nvim ~/.config/nvim
-	ln -sfn $(PWD)/.config/starship ~/.config/starship
-	ln -sfn $(PWD)/.config/vscode ~/.config/vscode
-	ln -sfn $(PWD)/.config/zed ~/.config/zed
+	ln -sf $(PWD)/.config/alacritty ~/.config/alacritty
+	ln -sf $(PWD)/.config/bat ~/.config/bat
+	ln -sf $(PWD)/.config/lazygit ~/.config/lazygit
+	ln -sf $(PWD)/.config/nvim ~/.config/nvim
+	ln -sf $(PWD)/.config/starship ~/.config/starship
+	ln -sf $(PWD)/.config/vscode ~/.config/vscode
+	ln -sf $(PWD)/.config/zed ~/.config/zed
 
 	ln -sf $(PWD)/.config/vscode/settings.json $(VSCODE_CONFIG_DIR)/settings.json
 	ln -sf $(PWD)/.config/vscode/keybindings.json $(VSCODE_CONFIG_DIR)/keybindings.json
-	ln -sfn $(PWD)/.config/vscode/snippets $(VSCODE_CONFIG_DIR)/snippets
+	ln -sf $(PWD)/.config/vscode/snippets $(VSCODE_CONFIG_DIR)/snippets
 
 .PHONY: clean
 clean: ## Clean up
