@@ -53,6 +53,7 @@
     "explorer.confirmDelete": false,
     "explorer.decorations.colors": true,
     "explorer.decorations.badges": false,
+    "explorer.excludeGitIgnore": false,
     // Editor
     "editor.fontFamily": "JetBrainsMono Nerd Font Mono", // "JetBrainsMono Nerd Font Mono", "FiraCode Nerd Font Mono Ret"
     "editor.fontSize": 18,
