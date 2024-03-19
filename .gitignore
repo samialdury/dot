@@ -17,3 +17,7 @@ AppSupport
 
 .config/packer/
 .config/hcloud/cli.toml
+
+.config/zed/*
+!.config/zed/keymap.json
+!.config/zed/settings.json
