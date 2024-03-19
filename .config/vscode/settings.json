@@ -147,8 +147,8 @@
     "apc.monospace.font.family": "JetBrainsMono Nerd Font Mono",
     "apc.activityBar": {
         "position": "bottom",
-        "size": 36,
-        "itemSize": 36,
+        "size": 22,
+        "itemSize": 26,
         "itemMargin": 2
     },
     "apc.statusBar": {
