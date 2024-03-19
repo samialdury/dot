@@ -13,7 +13,7 @@
     "window.commandCenter": false,
     // Workbench
     "workbench.productIconTheme": "fluent-icons",
-    "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+    "workbench.iconTheme": "catppuccin-mocha",
     "workbench.preferredLightColorTheme": "Catppuccin Mocha",
     "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
     "workbench.colorTheme": "Catppuccin Mocha",
@@ -387,29 +387,6 @@
     "[ignore]": {
         "editor.defaultFormatter": "foxundermoon.shell-format"
     },
-    // "editor.tokenColorCustomizations": {
-    //     "[*Light*]": {
-    //         "textMateRules": [
-    //             {
-    //                 "scope": "ref.matchtext",
-    //                 "settings": {
-    //                     "foreground": "#000"
-    //                 }
-    //             }
-    //         ]
-    //     },
-    //     "[*Dark*]": {
-    //         "textMateRules": [
-    //             {
-    //                 "scope": "ref.matchtext",
-    //                 "settings": {
-    //                     "foreground": "#fff"
-    //                 }
-    //             }
-    //         ]
-    //     },
-    //     "textMateRules": []
-    // },
     "pulumi-lsp.detectExtensionConflicts": false,
     "editor.tokenColorCustomizations": {
         "[*Light*]": {
