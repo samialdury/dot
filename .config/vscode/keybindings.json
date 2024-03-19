@@ -45,5 +45,19 @@
     {
         "key": "cmd+shift+h",
         "command": "settings.cycle.explorer.excludeGitIgnore",
-    }
+    },
+    // Toggle source control
+    {
+        "key": "cmd+shift+g",
+        "command": "workbench.view.scm"
+    },
+    // Split windows
+    {
+        "key": "cmd+shift+-",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "cmd+shift+\\",
+        "command": "workbench.action.splitEditorRight"
+    } 
 ]
