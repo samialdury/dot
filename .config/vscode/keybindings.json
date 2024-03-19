@@ -57,4 +57,8 @@
         "key": "cmd+-",
         "command": "workbench.action.positionPanelBottom"
     },
+    {
+        "key": "cmd+shift+h",
+        "command": "settings.cycle.explorer.excludeGitIgnore",
+    }
 ]
